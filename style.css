@@ -1,0 +1,198 @@
+/* Estilo base para o corpo da página */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna e legível */
+  background: #121212; /* Fundo escuro (modo escuro) */
+  color: #f0f0f0; /* Cor do texto padrão */
+  margin: 0;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o rodapé fique na parte inferior */
+}
+
+/* Estilo do cabeçalho */
+header {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 40px 20px;
+  background-color: #121212;
+}
+
+/* Container interno do cabeçalho */
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espaçamento entre imagem e texto */
+  flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+  max-width: 900px;
+}
+
+/* Estilo da imagem de perfil */
+header img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Deixa a imagem redonda */
+  object-fit: cover; /* Garante que a imagem cubra o espaço */
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.5); /* Sombra azul */
+}
+
+/* Título do cabeçalho */
+.text-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #00bcd4; /* Azul vibrante */
+}
+
+/* Parágrafo no cabeçalho */
+.text-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0;
+  color: #ccc; /* Cinza claro */
+}
+
+/* Seções principais (Contato e Sobre) */
+.contact,
+.about {
+  max-width: 700px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+/* Parágrafos dentro das seções principais */
+.contact p,
+.about p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Estilo dos links e botões de navegação */
+.links,
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap; /* Quebra de linha em telas pequenas */
+  margin-top: 10px;
+}
+
+/* Aparência dos botões/links */
+.links a,
+.options a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 15px;
+  border: 2px solid #00bcd4;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 8px rgba(0, 188, 212, 0.3);
+}
+
+/* Efeito hover nos links */
+.links a:hover,
+.options a:hover {
+  background-color: #00bcd4;
+  color: #121212; /* Texto escuro com fundo azul no hover */
+  transform: scale(1.05); /* Leve aumento */
+}
+
+/* Ícone nos links */
+.links a i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+/* Estilo das seções de conteúdo ocultas/visíveis */
+section.content-section {
+  display: none; /* Oculta por padrão */
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.1); /* Sombra suave */
+}
+
+/* Seção ativa (visível) */
+section.content-section.active {
+  display: block;
+}
+
+/* Título das seções */
+section.content-section h2 {
+  color: #00bcd4;
+  margin-bottom: 10px;
+}
+
+/* Links das plataformas de Bug Bounty */
+.bugbounty-links a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+  margin-bottom: 8px;
+  background-color: #232323;
+  box-shadow: 0 0 5px rgba(0, 188, 212, 0.2);
+}
+
+/* Hover nos links das plataformas */
+.bugbounty-links a:hover {
+  background-color: #00bcd4;
+  color: #121212;
+}
+
+/* Ícones personalizados nas listas das seções */
+.content-section ul li i {
+  margin-right: 8px;
+}
+
+/* Rodapé */
+footer {
+  margin-top: auto;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #333;
+}
+
+/* Efeito de zoom nos ícones da seção Hobby */
+#Hobby i {
+  transition: transform 0.2s;
+}
+
+#Hobby li:hover i {
+  transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 500px) {
+  .text-content h1 {
+    font-size: 2rem;
+  }
+
+  .links a,
+  .options a {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
